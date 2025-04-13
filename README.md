@@ -22,3 +22,6 @@ Feedback always helps! 🙏
 *   **exit**: Closes the shell.
 *   **mkdir**: Creates new folder.
 *   **sudo**: Run as administrator (you can't restart in user mode).
+*   **rmdir**: Deletes a folder.
+*   **cp**: Copy file from source to dest
+*   **mv**: Moves from source to destination
