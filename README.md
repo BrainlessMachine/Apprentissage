@@ -20,3 +20,5 @@ Feedback always helps! 🙏
 *   **rm**: Deletes a file or folder.
 *   **ls** : Lists files and directories with detail option (`-l` for long listing).
 *   **exit**: Closes the shell.
+*   **mkdir**: Creates new folder.
+*   **sudo**: Run as administrator (you can't restart in user mode).
