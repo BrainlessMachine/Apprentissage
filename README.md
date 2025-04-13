@@ -13,10 +13,10 @@ Feedback always helps! 🙏
 
 ## Key Features
 
-*   cd\*\*: Changes the current working directory.
-*   pwd\*\*: Displays the current working directory.
-*   clear\*\*: Clears the terminal.
-*   touch\*\*: Creates an empty file.
-*   rm\*\*: Deletes a file or folder.
+*   **cd**: Changes the current working directory.
+*   **pwd**: Displays the current working directory.
+*   **clear**: Clears the terminal.
+*   **touch**: Creates an empty file.
+*   **rm**: Deletes a file or folder.
 *   **ls** : Lists files and directories with detail option (`-l` for long listing).
-*   exit\*\*: Closes the shell.
+*   **exit**: Closes the shell.
