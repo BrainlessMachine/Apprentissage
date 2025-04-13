@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jojo9\\source\\repos\\Apprentissage\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD40849C-940F-44FD-B46A-129C5E512F44}|Apprentissage\\Apprentissage.csproj|c:\\users\\jojo9\\source\\repos\\apprentissage\\apprentissage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD40849C-940F-44FD-B46A-129C5E512F44}|Apprentissage\\Apprentissage.csproj|solutionrelative:apprentissage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jojo9\\source\\repos\\Apprentissage\\Apprentissage\\Program.cs",
+              "RelativeDocumentMoniker": "Apprentissage\\Program.cs",
+              "ToolTip": "C:\\Users\\jojo9\\source\\repos\\Apprentissage\\Apprentissage\\Program.cs",
+              "RelativeToolTip": "Apprentissage\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T07:48:09.128Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
