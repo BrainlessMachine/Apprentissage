@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Net.NetworkInformation;
+using System.ComponentModel.DataAnnotations;
+using System.IO;
 
 namespace Apprentissage
 {
@@ -7,43 +8,58 @@ namespace Apprentissage
     {
         public void Execute(string[] args)
         {
-            if (args.Length == 0)
+            /// Si tout les arguments ne sont pas présents
+            if (args.Length < 2)
             {
-                Console.WriteLine("Tu dois spécifier la destination !");
+                Console.WriteLine("Tu dois spécifier la source et la destination !");
                 return;
             }
 
+            /// Le chemin complet vers le fichier source
             string fileName = args[0];
+
+            /// La destionation
             string destPath = args[1];
+
+            /// Le dossier actuel
             string currentDirectory = Directory.GetCurrentDirectory();
+
+            /// Je ne comprends pas tout tout mais tkt
             string filePath = Path.Combine(currentDirectory, fileName);
 
-            // Vérifie si le fichier existe déjà ou pas
+            /// Ne récup que le nom du fichier parmis le chemin absolu
+            string fileOnlyName = Path.GetFileName(filePath);
+
+            /// Sert à résoudre le chemin absolu pour la destination (au cas où ce serait un chemin relatif classique)
+            if (destPath == "./" || destPath == ".")
+            {
+                /// Là tu combine le nom du fichier extrait et le chemin absolu déduit du relatif
+                destPath = Path.Combine(currentDirectory, fileOnlyName);
+            }
+            else if (destPath.StartsWith("/"))
+            {
+                destPath = Path.Combine(currentDirectory, destPath.TrimStart('/'));
+            }
+
+            /// Vérifie si le fichier source existe sinon ça copie du rien à destination de rien, donc ça fait rien mais c'est mieux de vérifier
             if (File.Exists(filePath))
             {
+                /// Si le dest est un dossier
                 if (Directory.Exists(destPath))
                 {
-                    string finalDest = Path.Combine(destPath, fileName);
+                    string finalDest = Path.Combine(destPath, fileOnlyName);
                     File.Copy(filePath, finalDest, true);
                     return;
                 }
                 else
                 {
-                    try
-                    {
-                        File.Copy(filePath, destPath, true); // Copie directe, si c'est un fichier complet
-                        return;
-                    }
-                    catch
-                    {
-                        Console.WriteLine("La destination n'est pas valide.");
-                        return;
-                    }
+                    File.Copy(filePath, destPath, true);
+                    return;
                 }
             }
             else
             {
-                Console.WriteLine("Impossible de copier le fichier");
+                Console.WriteLine("Impossible de trouver le fichier source.");
             }
         }
     }
