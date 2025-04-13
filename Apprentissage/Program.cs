@@ -20,6 +20,7 @@ namespace Apprentissage
             commandManager.RegisterCommand("sudo", new SudoCommand());
             commandManager.RegisterCommand("rmdir", new RmdirCommand());
             commandManager.RegisterCommand("cp", new CpCommand());
+            commandManager.RegisterCommand("mv", new MvCommand());
 
             /// Lopotit message au début du shell
             Console.WriteLine("Bienvenue dans ton mini-shell !");
@@ -40,7 +41,7 @@ namespace Apprentissage
                 string command = commandArgs[0].ToLower();
                 string[] argsForCommand = commandArgs.Length > 1 ? commandArgs[1..] : new string[0];
 
-                // L'exec depuis le gestionnaireè
+                // L'exec depuis le gestionnaire
                 commandManager.ExecuteCommand(command, argsForCommand);
                 if (command == "exit")
                 {
