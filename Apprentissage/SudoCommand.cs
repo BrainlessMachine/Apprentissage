@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Reflection.Metadata.Ecma335;
 using System.Security.Principal;
 
 namespace Apprentissage
@@ -42,6 +43,7 @@ namespace Apprentissage
                 catch
                 {
                     Console.WriteLine("Élévation annulée.");
+                    return;
                 }
             }
             else if (action == Environment.UserName && IsAdministrator())
@@ -62,6 +64,7 @@ namespace Apprentissage
                 catch
                 {
                     Console.WriteLine("Échec du retour en mode utilisateur.");
+                    return;
                 }
             }
             else if (IsAdministrator())

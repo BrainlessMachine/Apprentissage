@@ -21,10 +21,12 @@ namespace Apprentissage
             {
                 // Crée le fichier
                 Directory.CreateDirectory(dirPath);
+                return;
             }
             else
             {
                 Console.WriteLine("Impossible de créer le dossier");
+                return;
             }
         }
     }

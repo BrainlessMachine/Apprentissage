@@ -19,6 +19,7 @@ namespace Apprentissage
             commandManager.RegisterCommand("mkdir", new MkdirCommand());
             commandManager.RegisterCommand("sudo", new SudoCommand());
             commandManager.RegisterCommand("rmdir", new RmdirCommand());
+            commandManager.RegisterCommand("cp", new CpCommand());
 
             /// Lopotit message au début du shell
             Console.WriteLine("Bienvenue dans ton mini-shell !");

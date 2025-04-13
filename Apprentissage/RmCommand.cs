@@ -20,10 +20,12 @@ namespace Apprentissage
             if (File.Exists(filePath))
             {
                 File.Delete(filePath);
+                return;
             }
             else
             {
                 Console.WriteLine("Impossible de supprimer le fichier");
+                return;
             }
         }
     }

@@ -24,6 +24,7 @@ namespace Apprentissage
                 {
                     // Le fichier est créé, le flux est automatiquement fermé ici grâce à 'using'
                 }
+                return;
             }
             else
             {

@@ -61,6 +61,7 @@ namespace Apprentissage
             }
 
             Console.ResetColor();
+            return;
         }
     }
 }

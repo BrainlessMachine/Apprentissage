@@ -20,10 +20,12 @@ namespace Apprentissage
             if (Directory.Exists(DirectoryPath))
             {
                 Directory.Delete(DirectoryPath);
+                return;
             }
             else
             {
                 Console.WriteLine("Impossible de supprimer le dossier");
+                return;
             }
         }
     }

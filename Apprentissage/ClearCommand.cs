@@ -7,6 +7,7 @@ namespace Apprentissage
         public void Execute(string[] args)
         {
             Console.Clear();
+            return;
         }
     }
 }
